@@ -1,0 +1,107 @@
+3-2.1 Скачать архив Geolocation github zip или Geolocation data из Cloudera.
+
+Создать каталог ex_3_2:
+
+mkdir ex_3_2
+Пререйти в каталог ex_3_2:
+
+cd  ex_3_2
+Скачать данные Geolocation data:
+
+wget https://github.com/BosenkoTM/cloudera-quickstart/blob/main/data/geolocation.zip
+разархивировать данные
+
+unzip geolocation.zip
+
+
+
+cloudera@quickstart ~]$ ls
+cloudera-manager  enterprise-deployment.json  Kryazheva.txt  Pictures
+cm_api.py         express-deployment.json     lib            Public
+Desktop           geolocation.csv             __MACOSX       Templates
+Documents         geolocation.zip             Music          trucks.csv
+Downloads         kerberos                    parcels        Videos
+eclipse           Kryazheva.gz                part-r-00000   workspace
+[cloudera@quickstart ~]$ mkdir ex_3_2
+[cloudera@quickstart ~]$ ls
+cloudera-manager            ex_3_2                   lib           Templates
+cm_api.py                   express-deployment.json  __MACOSX      trucks.csv
+Desktop                     geolocation.csv          Music         Videos
+Documents                   geolocation.zip          parcels       workspace
+Downloads                   kerberos                 part-r-00000
+eclipse                     Kryazheva.gz             Pictures
+enterprise-deployment.json  Kryazheva.txt            Public
+[cloudera@quickstart ~]$ cd ex_3_2/
+[cloudera@quickstart ex_3_2]$ ls
+[cloudera@quickstart ex_3_2]$ wget https://github.com/BosenkoTM/cloudera-quickstart/blob/main/data/geolocation.zip
+--2024-04-05 09:22:54--  https://github.com/BosenkoTM/cloudera-quickstart/blob/main/data/geolocation.zip
+Resolving github.com... 140.82.121.4
+Connecting to github.com|140.82.121.4|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: “geolocation.zip”
+
+    [ <=>                                   ] 148,198      800K/s   in 0.2s    
+
+2024-04-05 09:22:55 (800 KB/s) - “geolocation.zip” saved [148198]
+
+[cloudera@quickstart ex_3_2]$ ls
+geolocation.zip
+[cloudera@quickstart ex_3_2]$ unzip geolocation.zip
+Archive:  geolocation.zip
+  End-of-central-directory signature not found.  Either this file is not
+  a zipfile, or it constitutes one disk of a multi-part archive.  In the
+  latter case the central directory and zipfile comment will be found on
+  the last disk(s) of this archive.
+unzip:  cannot find zipfile directory in one of geolocation.zip or
+        geolocation.zip.zip, and cannot find geolocation.zip.ZIP, period.
+[cloudera@quickstart ex_3_2]$ wget https://github.com/BosenkoTM/cloudera-quickstart/blob/main/data/geolocation.csv
+--2024-04-05 09:26:02--  https://github.com/BosenkoTM/cloudera-quickstart/blob/main/data/geolocation.csv
+Resolving github.com... 140.82.121.4
+Connecting to github.com|140.82.121.4|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: “geolocation.csv”
+
+    [  <=>                                  ] 842,986     1.95M/s   in 0.4s    
+
+2024-04-05 09:26:03 (1.95 MB/s) - “geolocation.csv” saved [842986]
+
+[cloudera@quickstart ex_3_2]$ wget https://github.com/BosenkoTM/cloudera-quickstart/blob/main/data/trucks.csv
+--2024-04-05 09:26:48--  https://github.com/BosenkoTM/cloudera-quickstart/blob/main/data/trucks.csv
+Resolving github.com... 140.82.121.3
+Connecting to github.com|140.82.121.3|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: “trucks.csv”
+
+    [ <=>                                   ] 232,131     1.18M/s   in 0.2s    
+
+2024-04-05 09:26:48 (1.18 MB/s) - “trucks.csv” saved [232131]
+
+[cloudera@quickstart ex_3_2]$ ls
+geolocation.csv  geolocation.zip  trucks.csv
+[cloudera@quickstart ex_3_2]$ 
+
+
+Для переделанного варианта (правильно скачанный архив):
+
+3-2.1 Скачать архив Geolocation github zip
+[cloudera@quickstart ~]$ wget https://community.cloudera.com/legacyfs/online/attachments/2768-geolocation.zip
+--2024-04-14 10:56:30--  https://community.cloudera.com/legacyfs/online/attachments/2768-geolocation.zip
+Resolving community.cloudera.com... 13.33.243.69, 13.33.243.55, 13.33.243.90, ...
+Connecting to community.cloudera.com|13.33.243.69|:443... failed: Connection timed out.
+Connecting to community.cloudera.com|13.33.243.55|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 74878 (73K) [application/zip]
+Saving to: “2768-geolocation.zip”
+
+100%[=======================================================================================>] 74,878      --.-K/s   in 0.1s    
+
+2024-04-14 10:57:34 (554 KB/s) - “2768-geolocation.zip” saved [74878/74878]
+
+
+
+
+
+
